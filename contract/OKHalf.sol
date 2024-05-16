@@ -37,9 +37,4 @@ contract OKHalf is ERC1155, Ownable {
     {
         _mintBatch(to, ids, amounts, data);
     }
-
-    // supply
-    function totalSupply() external pure returns (uint256) {
-        return 0;
-    }
 }
