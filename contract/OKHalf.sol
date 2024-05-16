@@ -7,6 +7,10 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
 contract OKHalf is ERC1155, Ownable {
+
+    string public name = "OK Half";
+    string public symbol = "OKHALF";
+
     constructor(address initialOwner)
         ERC1155("https://jigsaw-fam.github.io/ok-half/json/")
         Ownable(initialOwner)
@@ -32,5 +36,10 @@ contract OKHalf is ERC1155, Ownable {
         onlyOwner
     {
         _mintBatch(to, ids, amounts, data);
+    }
+
+    // supply
+    function totalSupply() external pure returns (uint256) {
+        return 0;
     }
 }
