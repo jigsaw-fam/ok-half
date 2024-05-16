@@ -75,11 +75,11 @@ function initComparisons() {
     }
   }
 }
-function init(img_left, img_right, sel='.hello-half', delay=100) {
+function init(img_left, img_right, delay=100) {
   let resizeTimeout;
   function onResize() {
       let width = Math.min(window.innerWidth, window.innerHeight);
-      let container = document.querySelector(sel);
+      let container = document.querySelector('.hello-half');
       // container.innerHTML = `${width}x${width}`;
       container.innerHTML = `
         <div class="img-comp-container" style="height: ${width}px;">

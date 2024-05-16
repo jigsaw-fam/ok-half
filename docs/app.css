@@ -3,7 +3,9 @@
 }
 body {
   margin: 0px;
-  background-color: teal;
+}
+.hello-half {
+  overflow: hidden;
 }
 .img-comp-container {
   position: relative;
@@ -28,5 +30,4 @@ body {
   background-color: #FC3;
   opacity: 0.5;
   border-radius: 50%;
-  overflow: hidden;
 }
