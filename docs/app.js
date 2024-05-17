@@ -1,3 +1,4 @@
+let slider_bg = 'white';
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_image_compare
 function initComparisons() {
   var x, i;
@@ -18,6 +19,7 @@ function initComparisons() {
     /*create slider:*/
     slider = document.createElement("DIV");
     slider.setAttribute("class", "img-comp-slider");
+    slider.style.backgroundColor = slider_bg;
     /*insert slider*/
     img.parentElement.insertBefore(slider, img);
     /*position the slider in the middle:*/
@@ -75,7 +77,8 @@ function initComparisons() {
     }
   }
 }
-function init(img_left, img_right, delay=100) {
+function init(img_left, img_right, color='white', delay=100) {
+  slider_bg = color;
   let resizeTimeout;
   function onResize() {
       let width = Math.min(window.innerWidth, window.innerHeight);
